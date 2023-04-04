@@ -1,207 +1,325 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hexo',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-04-04 23:17:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/04/04/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-04-04T11:06:18.319Z" itemprop="datePublished">2023-04-04</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/04/04/hello-world/">Hello World</a>
-    </h1>
-  
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a></div></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2023/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="计算机理论知识总结">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机理论知识总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="计算机理论知识总结">计算机理论知识总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-04T15:15:55.757Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></span></div><div class="content">这个仓库主要用来对计算机学科的基础理论知识和主流编程语言相关内容进行总结，每个目录对应一个大的方向。
+腾讯内推可以发简历到 &#x78;&#117;&#101;&#122;&#97;&#x69;&#x67;&#100;&#115;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109; ，邮件标题：学校+手机号+岗位。我会对合适的简历，内推到相应部门，并及时反馈面试进度与结果。关于TX 面试的一些疑问，也可以发邮件到邮箱咨询。
+主要内容主要包含的计算机基础有以下几个大方向：
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+DataBase
+DataStructure
+Linux_OS
+Network
+Algorithm
+Math
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+编程语言目前有：
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+Python
+C++
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+此外，还有几个目录：
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+Coding：一些 C++ 的代码
+OnlineJudge：一些 OJ 的解题代码
+Offer：主要分享一些和找工作相关的内容
+Others：一些无法归类，但是可能有用的东西
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/04/04/hello-world/" data-id="clg26ere80000vous721s2e5h" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
+最后，Questions 文件列出了一些重要的知识点，可以用来自检，看看自己有没有遗漏一些重要知识 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2023/04/04/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%9F%BA%E4%BA%8EDorprax%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E7%9A%84v2ray/" title="Doprax搭建免费的v2ray">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Doprax搭建免费的v2ray"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/04/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%9F%BA%E4%BA%8EDorprax%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E7%9A%84v2ray/" title="Doprax搭建免费的v2ray">Doprax搭建免费的v2ray</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-04T15:15:55.749Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></span></div><div class="content">这是我的第一篇文章Doprax搭建免费的v2ray
+DopraxDoprax又是一款可以免费使用的容器类应用，相比于Replit，可以说是各有千秋，原因是Replit虽然速度挺快但是容易出现断开或者停止服务的情况；Doprax的免费用户可以实现永久在线，不过速度明显比repl要慢一些但却可以不限制流量，测试最高33M，youtube能跑1.3万，1080p不太卡。晚高峰速度470k，建议使用优选IP。
+鉴于Doprax稳定的服务，还是有小伙伴愿意尝试的，搭建也非常简单，下面开始：Doprax官网：https://www.doprax.com/r/proxy/
+搭建步骤1、作者github： https://github.com/hiifeng/V2ray-for-Doprax，先点个star然后fork一下；
+2、按照作者提示，需要修改一下dockerfile中的UUID、VMESS_WSPATH、VLESS_WSPATH，UUID生成可用https://www.v2fly.org/awesome/tools.html ，path随便写就行了；部署之后修改也OK！
+3、Doprax创建 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2023/04/04/%E6%AF%8F%E6%9C%885%E5%85%83%EF%BC%8C%E4%BE%BF%E5%AE%9C%E4%BD%86%E9%80%9F%E5%BA%A6%E9%A3%9E%E5%BF%AB%E7%9A%84%E7%BE%8E%E5%9B%BDVPS(6%E6%9C%BA%E6%88%BF%E5%8F%AF%E9%80%89)%E4%BD%8E%E8%87%B3$9.89%E5%B9%B4/" title="Doprax搭建免费的v2ray">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Doprax搭建免费的v2ray"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/04/%E6%AF%8F%E6%9C%885%E5%85%83%EF%BC%8C%E4%BE%BF%E5%AE%9C%E4%BD%86%E9%80%9F%E5%BA%A6%E9%A3%9E%E5%BF%AB%E7%9A%84%E7%BE%8E%E5%9B%BDVPS(6%E6%9C%BA%E6%88%BF%E5%8F%AF%E9%80%89)%E4%BD%8E%E8%87%B3$9.89%E5%B9%B4/" title="Doprax搭建免费的v2ray">Doprax搭建免费的v2ray</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-04T15:15:55.741Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></span></div><div class="content">每月 5 元，便宜但速度飞快的美国 VPS(6 机房可选)低至$9.89&#x2F;年 梅塔沃克  2022-12-22 PM  63086℃
+racknerd 发布了 2022 年新年 VPS 优惠促销活动，年付不到 10 美元！美国 VPS 有 6 个可选数据中心分别是：洛杉矶、圣何塞、西雅图、达拉斯、芝加哥、纽约。支持 PayPal 和支付宝付款，默认 1Gbps 带宽，KVM 虚拟，纯 SSD raid10，solusvm 面板…
+
+2022 年黑五促销 VPS,注意：这个活动不是总有，若链接失效只能购买别的了
 
 
 
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2023/04/04/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2023 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
+内存
+CPU
+SSD
+流量
+价格
+购买
 
 
 
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+768M
+1 核
+10G
+1T&#x2F;月
+$10.28&#x2F;年
+购买
+
+
+1.5G
+1 核
+30G
+3T&#x2F;月
+$16.88
+购买
+
+
+2G
+2.5 核
+60G
+7T&#x2F;月
+$28.55
+购买
+
+
+3.5G
+2 核
+80G
+10T&#x2F;月
+$38.88
+购买
+
+
+4.5G
+3 核
+100G
+12TB
+$48.77&#x2F;年
+购买
+
+
+这里是 dc-02 图片演示站，可以体验一下 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2023/04/04/%E6%90%AD%E5%BB%BA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%B9%E8%AF%9D%E6%9C%BA%E5%99%A8%E4%BA%BAchatgpt-telegram/" title="搭建人工智能对话机器人chatgpt-telegram">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建人工智能对话机器人chatgpt-telegram"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/04/%E6%90%AD%E5%BB%BA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%B9%E8%AF%9D%E6%9C%BA%E5%99%A8%E4%BA%BAchatgpt-telegram/" title="搭建人工智能对话机器人chatgpt-telegram">搭建人工智能对话机器人chatgpt-telegram</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-04T15:15:55.734Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></span></div><div class="content">搭建人工智能对话机器人chatgpt-telegram早些时候，我给大家简单介绍了ChatGPT的注册方法，因为使用网页版真的是很不方便，于是来给大家写写这东西如何接入我们常用的即时通讯软件，查找了一番，有接入QQ的，有接入微信的，都很好！
+我也说了，接入微信有一定难度，搭建之前要看看自己的微信（或者小号）可否登陆网页版，一般是不可以的。
+所以，咱直接来接入telegram bot，我有点着急因为是首发，期待大家的点赞和订阅。
+准备1、ChatGPT账号并登陆；
+2、telegram账号；
+3、海外服务器，国内的不行，腾讯阿里的话也要买国外！
+推荐一个小内存的vps：RN的1核768M $10.28&#x2F;年
+4、项目地址：https://github.com/m1guelpf/chatgpt-telegram
+步骤1、下载chatgpt-telegram文件到服务器，git也行，我使用的是sftp的方法，为了简便，我直接把文件夹改名为：chatgpt 了；
+小提示：下载的文件要与系统相符，腾讯阿里等服务器是amd64，我用的甲骨文是arm64的
+2、进入到chatgpt目录，修改 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2023/04/04/%E5%A6%82%E4%BD%95%E7%9B%91%E6%8E%A7%E5%88%AB%E4%BA%BA%E7%9A%84%E7%BD%91%E7%AB%99/" title="如何监控别人的网站">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何监控别人的网站"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/04/%E5%A6%82%E4%BD%95%E7%9B%91%E6%8E%A7%E5%88%AB%E4%BA%BA%E7%9A%84%E7%BD%91%E7%AB%99/" title="如何监控别人的网站">如何监控别人的网站</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-04T15:15:55.725Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></span></div><div class="content">
+技术
+项目
+资源
+收付款
+
+
+首页&#x2F; 技术&#x2F; 正文
+如何监控别人的网站 梅塔沃克  2023-02-16 PM  593℃
+场景可能是你用不到，但是我遇到了这样一个问题，就是我想详细了解我的竞争对手的网站（电商类）销售情况和新品上架情况，但是我总不至于像盯盘一样，在电脑或者手机上一直看着这个站吧！
+于是我想到用一个脚本来检测，脚本的功能是如果发现对手出售了商品，就发送我售出商品的名称，价格；如果是新上线了商品，就要邮件告诉我新品的名称，价格，这对于我分析对手的销量和趋势，然后在我的店铺中择优上货是有一定帮助作用的。
+另外，这个脚本作用不仅仅如此，你也可以修改一下，包括但不限于监控自己的抖音粉丝上升趋势、其他事件新闻进展、甚至是当前热点等等。
+现成的产品当然，我前面的想法在现实中每个公司、店铺都用得到，而且有人专门开发程序为此而服务，比方说比较好的网页监控工具：Visualping、Distill Web Monitor、Wachete等，他们都是做这个的也都很专业，但是要想深度使用，就要收费了；
+国内也有类似的产品，我尝试过。不过也有限制，每天1个网页变化只 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2023/04/04/%E5%A4%9A%E5%BE%84%E6%95%88%E5%BA%94/" title="多径效应">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="多径效应"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/04/%E5%A4%9A%E5%BE%84%E6%95%88%E5%BA%94/" title="多径效应">多径效应</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-04T15:15:55.715Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></span></div><div class="content">多径效应的数学模型可以用信号的时域或频域表示，其中一些重要的公式如下：
+时域信号表示：接收信号可以表示为多个路径的信号叠加而成，即
+r(t) &#x3D; ∑ h(τ) * s(t-τ) + n(t)
+其中，r(t)表示接收信号，h(τ)表示第τ个路径的多径系数，s(t-τ)表示第τ个路径的发送信号经过时延后的波形，n(t)表示噪声信号。
+
+频域信号表示：接收信号可以表示为不同频率的信号幅度和相位的叠加，即
+R(f) &#x3D; ∑ H(f) * S(f) + N(f)
+其中，R(f)表示接收信号频域表达式，H(f)表示多径系数的频域表达式，S(f)表示发送信号的频域表达式，N(f)表示噪声的频域表达式。
+
+瑞利衰落模型：瑞利衰落模型是一种常用的多径效应模型，它假设在无线信道中只存在散射波，而没有直达波。其多径系数和多径功率延迟谱分别可以表示为：
+h(t) &#x3D; A * cos(2πf_d*t + Φ)
+PDP(t) &#x3D; A^2 * δ(t)
+其中，A表示幅度，f_d表示多普勒频率，Φ表示随机相位，δ(t)表示单位冲击响应函数。
+
+莱斯衰落模型：莱斯衰落模型假设信道 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2023/04/04/%E5%9F%BA%E7%A1%80%E7%AF%87%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/" title="基础篇】搭建hexo博客（一）">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基础篇】搭建hexo博客（一）"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/04/%E5%9F%BA%E7%A1%80%E7%AF%87%E6%90%AD%E5%BB%BAhexo%E5%8D%9A%E5%AE%A2/" title="基础篇】搭建hexo博客（一）">基础篇】搭建hexo博客（一）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-04T15:15:55.708Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></span></div><div class="content">*1*|***0***【基础篇】搭建hexo博客（一）
+作者：dreamsdrny
+*2*|***0***前言
+你是否想拥有属于自己的博客？你是否无奈与自己不会写网站而烦恼？
+不要担心，本系列教程将会实现你白嫖的愿望，连服务器都不需要买，就算没有任何编程基础也可以学会的搭建博客教程
+下面来看看这些好看的个人博客：
+http://fech.in/
+https://xaoxuu.com/
+https://nexmoe.com/
+https://sakura.hojun.cn/
+以上的博客你是否都心动了呢？我想说的是，它们都是由hexo搭建的，等你学完了基础和进阶篇，上面展示的博客你都可以实现，就让我们一步步来吧！
+这是一个系列教程，有基础篇和进阶篇，让我们看看这两个教程实现的效果
+
+【基础篇】
+
+
+学会安装相应需要的依赖软件
+学会更换主题
+学会基本的站点配置
+知道怎么生成文章并编辑
+上传你的博客并拥有一个可以访问的地址
 
 
 
-
-<script src="/js/script.js"></script>
-
+进阶篇
 
 
+学会用markdown基本语法编写你的文章
+学会如何搭建一个免费的图床并使用
+学会进一步配置主题并了解所有主题的基本功能
+拥有自己的域名并绑定
+使用一些插 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2023/04/04/%E5%9F%BA%E4%BA%8Ebt%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/" title="基于bt（宝塔面板）搭建Hexo 博客程序)">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于bt（宝塔面板）搭建Hexo 博客程序)"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/04/%E5%9F%BA%E4%BA%8Ebt%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2%E7%A8%8B%E5%BA%8F/" title="基于bt（宝塔面板）搭建Hexo 博客程序)">基于bt（宝塔面板）搭建Hexo 博客程序)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-04T15:15:55.697Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></span></div><div class="content">基于bt（宝塔面板）搭建Hexo 博客程序搭建流程
+本地安装 Hexo
+安装宝塔
+服务器创建 git 仓库
+本地使用 Hexo 生成的博客,部署到服务器
 
+本地安装 Hexo具体流程参见Hexo 文档
+宝塔面板安装宝塔Linux面板7.4.6版本是基于Centos开发的，为了最好的兼容性，请优先考虑使用Centos8.x系统
+系统兼容性顺序：
+Centos8.x &gt; Centos7.x &gt; Ubuntu18.04 &gt; Debian10 &gt; Ubuntu 20.04 &gt; 其它系统
+提示：Centos官方已宣布在2020年停止对Centos6的维护更新，各大软件开发商也逐渐停止对Centos6的兼容，新服务器不建议使用Centos6
+Centos安装命令：
 
-  </div>
-</body>
-</html>
+yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh
+
+复制代码
+试验性Centos&#x2F;Ubuntu&#x2F; ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2023/04/04/%E5%89%8D%E8%A8%80%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B8%80/" title="No title">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/04/%E5%89%8D%E8%A8%80%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B8%80/" title="No title">No title</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-04T15:15:55.689Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></span></div><div class="content">前言博客搭建过程遇到任何问题，优先在本页面搜索，检查是否已经有该配置教程。遇到问题可以优先在文章评论区留言，注意留言时请填写正确的邮箱以确保能收到站长的回复。实在解决不了的问题可添加博主 Wechat ，添加好友时请备注自己的姓名+专业，如 张三 计算机科学与技术。环境准备本教程主要面向 Windows 用户
+操作系统：Windows10NodeGitHexoidea（推荐使用 Visual Studio Code）一个 GitHub 帐号一个云服务器（可选）一个域名（可选）安装 Node方式一方式二对于前端工程师，或正打算学习前端相关知识，建议用nvm来管理Node版本，请移步教程 nvm,npm与nrm。
+安装 Hexo在目标路径打开CMD窗口，输入npm install -g hexo-cli安装Hexo环境。
+BASHnpm install -g hexo-cli安装完后输入hexo -v验证是否安装成功。
+注册 GitHub 帐号进入官网 https://github.com/点击右上角的 Sign up(注册)，不是Sign in（登录）。
+填写自己的邮箱、密码、用户名等信 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2023/04/04/%E5%85%8D%E8%B4%B9%E7%9A%84shell/" title="免费的shell">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="免费的shell"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/04/04/%E5%85%8D%E8%B4%B9%E7%9A%84shell/" title="免费的shell">免费的shell</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-04T15:15:55.681Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></span></div><div class="content">本次介绍的免费shell，严格来说它不能叫vps，因为它只能作为新手练习Linux使用，没有root权限。若想使用有权限的vps，可以参考我以前给大家介绍的https://wenjie.org/archives/lcayun
+xshellz官网：https://www.xshellz.com/
+可以直接到上面的地址注册，仅仅需要一个用户名，邮箱和密码即可！
+注册登录以后，直接添加shell，仅可选美国（IP是蒙特利尔的），添加以后，到 https://www.xshellz.com/xpanel 查看shell信息，再点击详情可进入修改ssh密码，且在此页面，给到了ssh的主机、端口、用户名，修改密码后可以直接使用ssh工具进行连接。
+
+机器配置：仅仅100M HDD，着实小了点，3G共享内存够用！
+没有root权限，有什么可玩性呢？
+可以用来练习Linux命令、搭建git服务器、作为OpenVPN节点、跑python脚本，更多有趣的玩法，等你来发现，看看https://www.xshellz.com/package/这些玩意！但是它也是不定期关机的，要想始终保持在线，需要安装psyB ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">19</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="计算机理论知识总结"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="计算机理论知识总结"/></a><div class="content"><a class="title" href="/2023/04/04/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="计算机理论知识总结">计算机理论知识总结</a><time datetime="2023-04-04T15:15:55.757Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/04/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%9F%BA%E4%BA%8EDorprax%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E7%9A%84v2ray/" title="Doprax搭建免费的v2ray"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Doprax搭建免费的v2ray"/></a><div class="content"><a class="title" href="/2023/04/04/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%E5%9F%BA%E4%BA%8EDorprax%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E7%9A%84v2ray/" title="Doprax搭建免费的v2ray">Doprax搭建免费的v2ray</a><time datetime="2023-04-04T15:15:55.749Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/04/%E6%AF%8F%E6%9C%885%E5%85%83%EF%BC%8C%E4%BE%BF%E5%AE%9C%E4%BD%86%E9%80%9F%E5%BA%A6%E9%A3%9E%E5%BF%AB%E7%9A%84%E7%BE%8E%E5%9B%BDVPS(6%E6%9C%BA%E6%88%BF%E5%8F%AF%E9%80%89)%E4%BD%8E%E8%87%B3$9.89%E5%B9%B4/" title="Doprax搭建免费的v2ray"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Doprax搭建免费的v2ray"/></a><div class="content"><a class="title" href="/2023/04/04/%E6%AF%8F%E6%9C%885%E5%85%83%EF%BC%8C%E4%BE%BF%E5%AE%9C%E4%BD%86%E9%80%9F%E5%BA%A6%E9%A3%9E%E5%BF%AB%E7%9A%84%E7%BE%8E%E5%9B%BDVPS(6%E6%9C%BA%E6%88%BF%E5%8F%AF%E9%80%89)%E4%BD%8E%E8%87%B3$9.89%E5%B9%B4/" title="Doprax搭建免费的v2ray">Doprax搭建免费的v2ray</a><time datetime="2023-04-04T15:15:55.741Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/04/%E6%90%AD%E5%BB%BA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%B9%E8%AF%9D%E6%9C%BA%E5%99%A8%E4%BA%BAchatgpt-telegram/" title="搭建人工智能对话机器人chatgpt-telegram"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="搭建人工智能对话机器人chatgpt-telegram"/></a><div class="content"><a class="title" href="/2023/04/04/%E6%90%AD%E5%BB%BA%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%B9%E8%AF%9D%E6%9C%BA%E5%99%A8%E4%BA%BAchatgpt-telegram/" title="搭建人工智能对话机器人chatgpt-telegram">搭建人工智能对话机器人chatgpt-telegram</a><time datetime="2023-04-04T15:15:55.734Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/04/%E5%A6%82%E4%BD%95%E7%9B%91%E6%8E%A7%E5%88%AB%E4%BA%BA%E7%9A%84%E7%BD%91%E7%AB%99/" title="如何监控别人的网站"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何监控别人的网站"/></a><div class="content"><a class="title" href="/2023/04/04/%E5%A6%82%E4%BD%95%E7%9B%91%E6%8E%A7%E5%88%AB%E4%BA%BA%E7%9A%84%E7%BD%91%E7%AB%99/" title="如何监控别人的网站">如何监控别人的网站</a><time datetime="2023-04-04T15:15:55.725Z" title="Created 2023-04-04 23:15:55">2023-04-04</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">April 2023</span><span class="card-archive-list-count">19</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">19</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-04-04T15:17:06.055Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
