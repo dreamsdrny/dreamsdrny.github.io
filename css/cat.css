@@ -77,4 +77,6 @@ body::-webkit-scrollbar {
     }
 }
 
-
+#drone .container {
+    overflow: hidden;
+}
